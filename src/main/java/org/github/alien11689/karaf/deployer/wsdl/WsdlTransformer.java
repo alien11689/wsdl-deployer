@@ -1,4 +1,4 @@
-package org.apache.karaf.deployer.wsdl;
+package org.github.alien11689.karaf.deployer.wsdl;
 
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +36,8 @@ import java.util.jar.Manifest;
 import java.util.stream.Collectors;
 import java.util.zip.ZipEntry;
 
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
+
 @Slf4j
 public class WsdlTransformer {
     public static void transform(URL url, String options, OutputStream os) throws Exception {
@@ -60,7 +62,7 @@ public class WsdlTransformer {
         Manifest m = new Manifest();
         m.getMainAttributes().putValue("Manifest-Version", "2");
         m.getMainAttributes().putValue(Constants.BUNDLE_MANIFESTVERSION, "2");
-        m.getMainAttributes().putValue(Constants.BUNDLE_SYMBOLICNAME, path);
+        m.getMainAttributes().putValue(Constants.BUNDLE_SYMBOLICNAME, name);
         m.getMainAttributes().putValue(Constants.BUNDLE_VERSION, str[1]);
         m.getMainAttributes().putValue(Constants.IMPORT_PACKAGE, "javax.jws,javax.jws.soap,javax.xml.bind.annotation,javax.xml.namespace,javax.xml.ws");
 

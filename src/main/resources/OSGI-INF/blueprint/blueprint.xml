@@ -23,10 +23,10 @@
         <service-properties>
             <entry key="url.handler.protocol" value="wsdl"/>
         </service-properties>
-        <bean class="org.apache.karaf.deployer.wsdl.WsdlUrlHandler"/>
+        <bean class="org.github.alien11689.karaf.deployer.wsdl.WsdlUrlHandler"/>
     </service>
 
-    <bean id="wsdlDeploymentListener" class="org.apache.karaf.deployer.wsdl.WsdlDeploymentListener"/>
+    <bean id="wsdlDeploymentListener" class="org.github.alien11689.karaf.deployer.wsdl.WsdlDeploymentListener"/>
 
     <!-- Force a reference to the url handler above from the osgi registry to (try to) make sure
          the url handler is registered inside the framework.  Else we can run into timing issues

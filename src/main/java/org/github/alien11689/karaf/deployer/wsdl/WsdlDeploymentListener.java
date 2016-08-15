@@ -1,4 +1,4 @@
-package org.apache.karaf.deployer.wsdl;
+package org.github.alien11689.karaf.deployer.wsdl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.felix.fileinstall.ArtifactUrlTransformer;
@@ -9,6 +9,8 @@ import org.xml.sax.SAXParseException;
 
 import java.io.File;
 import java.net.URL;
+
+import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 @Slf4j
 public class WsdlDeploymentListener implements ArtifactUrlTransformer {
